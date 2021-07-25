@@ -45,7 +45,7 @@ footer{
 
 }
 #form{
-    display: block;
+    display: inline-block;
     width: 500px;
     border:#eee solid 1px ;
     background-color:rgba(64, 34, 24,0.7);
@@ -71,4 +71,19 @@ label{
     font-size: 15px;
     padding-right: 90px;
 }
+
+table , th ,tr, td{
+    display: inline-block;
+    border: 1px solid #eee;
+    background-color:rgba(64, 34, 24,0.7);
+    color: #eee;
+    font-size: 15px;
+    /* width: 500px; */
+
+}
+td{
+    width: 100px;
+    text-align: center;
+}
+
 
