@@ -78,7 +78,7 @@ function renderTable(){
         rowHead.appendChild(tdEl);
         
     }
-    
+
     let tBody = document.getElementById('tbody');
     let rowBody = document.createElement("tr");
     tBody.appendChild(rowBody);
@@ -86,17 +86,17 @@ function renderTable(){
     for(let j=0 ; j< Books.all.length ;j++){
 
         let tdName = document.createElement("td");
-        tdName.textContent = Books.all.name;
+        tdName.textContent = Books.all[j].name;
         rowBody.appendChild(tdName);
 
 
         let tdPages= document.createElement("td");
-        tdPages.textContent = Books.all.pagesArray;
+        tdPages.textContent = Books.all[j].pagesArray;
         rowBody.appendChild(tdPages);
 
 
         let tdPrice = document.createElement("td");
-        tdPrice.textContent = Books.all.price;
+        tdPrice.textContent = Books.all[j].price;
         rowBody.appendChild(tdPrice);
 
     

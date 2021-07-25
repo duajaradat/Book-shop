@@ -14,6 +14,7 @@ header{
     background-color: rgba(64, 34, 24,0.7);
     height: 70px;
     padding-top: 30px;
+    opacity: 90%;
 
 }
 header h1{
@@ -31,29 +32,43 @@ footer{
     text-align: center;
     font-size:10px ;
     margin: 0;
-
+    opacity: 90%;
 }
 #submit{
     background-color: #C68B59;
     display: flex;
+    width: 155px;
+    margin-right: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: #eee;
+
 }
 #form{
-    display: inline-block;
-    width: 400px;
-    border:rgba(64, 34, 24,0.7) solid 1px ;
-background-color:rgba(64, 34, 24,0.7);
-margin-top: 70px;
-margin-left:30px;
+    display: block;
+    width: 500px;
+    border:#eee solid 1px ;
+    background-color:rgba(64, 34, 24,0.7);
+    margin-top: 70px;
+    margin-left:10px;
+    border-radius: 4px;
+    opacity: 90%;
+    height: 100px;
 }
+input{
+    width: 50px;
+}
+
 label{
-    font-size: 13px;
+    font-size: 15px;
     color: #eee;
-    padding-right: 150px;
+    padding-right: 100px;
+    padding-left: 50px;
+    font-weight: bold;
 }
-#name{
+#name , #price {
     display: inline-block;
-    font-size: 12px;
+    font-size: 15px;
+    padding-right: 90px;
 }
-#price{
-    display: inline-block;
-}
+
