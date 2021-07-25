@@ -48,21 +48,25 @@ function addBookHandler(event){
      newBook.getPages(1,500);
 
      renderTable();
+     console.log("render");
 
 }
 
-let tHead = document.getElementById('thead');
-let tBody = document.getElementById('tbody');
+
 
 let headingArray = ["Book Name","Book Pages" , "Price"];
 
 let Total = 0;
+
 function renderTable(){
 
     let Pages = pageRandom(1,500);
 
-    tHead.innerHTML="";
-    tBody.innerHTML="";
+    document.querySelector('thead').innerHTML="";
+    document.querySelector('tbody').innerHTML="";
+
+    let tHead = document.getElementById('thead');
+   
 
     let rowHead = document.createElement("tr");
     tHead.appendChild(rowHead);
@@ -74,33 +78,37 @@ function renderTable(){
         rowHead.appendChild(tdEl);
         
     }
-
+    
+    let tBody = document.getElementById('tbody');
     let rowBody = document.createElement("tr");
     tBody.appendChild(rowBody);
 
     for(let j=0 ; j< Books.all.length ;j++){
 
         let tdName = document.createElement("td");
-        rowBody.appendChild(tdName);
         tdName.textContent = Books.all.name;
+        rowBody.appendChild(tdName);
 
 
         let tdPages= document.createElement("td");
-        rowBody.appendChild(tdPages);
         tdPages.textContent = Books.all.pagesArray;
+        rowBody.appendChild(tdPages);
 
 
         let tdPrice = document.createElement("td");
-        rowBody.appendChild(tdPrice);
         tdPrice.textContent = Books.all.price;
+        rowBody.appendChild(tdPrice);
 
-        
-        let pTotal=document.createElement('p');
-        divEl.appendChild(pTotal);
-        pTotal.textContent = Pages;
+    
+        Total+=Pages;
 
     }
-    Total+=Pages;
+
+
+     let pTotal = document.createElement('p')
+     divEl.appendChild(pTotal);
+     pTotal.textContent = `Total ${Total}`
+
 }
 
 
